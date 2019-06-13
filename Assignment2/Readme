@@ -1,0 +1,7 @@
+how to execute the file:
+step 1:
+clang++-3.5  -o assignment2 Assignment2.cpp `llvm-config-3.5 --cxxflags` `llvm-config-3.5 --ldflags` `llvm-config-3.5 --libs` -lpthread -lncurses -ldl
+step 2:
+clang-3.5 -emit-llvm  -S -o testcase1.ll testcase1.c
+step 3:
+./assignment2 testcase1.ll

@@ -1,0 +1,14 @@
+Folder information:
+executable: contains the executable program, part1 and part2
+source code: contains 2 source files: Assignment3_part1.cpp and Assignment3_part2s.cpp
+test file: contains all the *.c and *.ll file.
+
+how to compile and execute the program:
+Take part 1 as example--
+step 1:
+clang++-3.5  -o part1 Assignment3_part1.cpp `llvm-config-3.5 --cxxflags` `llvm-config-3.5 --ldflags` `llvm-config-3.5 --libs` -lpthread -lncurses -ldl
+step 2:
+clang-3.5 -emit-llvm  -S -o test1.ll test1.c
+step 3:
+./part1 test1.ll
+
